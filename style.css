@@ -1,0 +1,31 @@
+body {
+background-color: #141413
+}
+.menu_color {
+color: #ed940e
+}
+.item-image {
+  width: 100px;
+  max-width: 30%;
+}
+.item-image img {
+  width: 100%;
+  height: auto;
+}
+h1 {
+color: white;
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+width: 100%;
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+p {
+color: white;
+font-family: "Comic Sans MS";
+width: 100%;
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+

@@ -1,0 +1,82 @@
+/* === Разметка основного меню === */
+li {
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.hz-bar ul {
+ list-style: none;
+ margin:0;
+ padding:0;
+}
+.hz_menu > li {
+ float: left;
+ margin:0;
+ padding:0;
+ position:relative;
+}
+.hz_menu li a {
+ display:block;
+ margin:0;
+ padding:15px 20px;
+ text-decoration: none;
+}
+/* === Разметка выпадающего подменю === */
+.dropdown_menu {
+ display: block;
+ position: absolute;
+ left: -3000px;
+ top: 100%;
+}
+.dropdown_menu > ul {
+ border: 1px solid;
+ margin-top: 10px;  /* отступ от основного меню */
+ padding: 10px 1px;
+ min-width: 140px;
+ opacity: 0;
+ transition: opacity .5s; /* анимация прозрачности */
+}
+.dropdown_menu li a {
+ white-space: nowrap; /* если не очень длинные заголовки */
+ z-index: 9999;
+ padding: 10px 20px;
+}
+.parent_dropdown:hover .dropdown_menu {
+ left: 0px;
+}
+.parent_dropdown:hover .dropdown_menu ul {
+ opacity: 1;
+}
+/* Предотвращаем схлопывание */
+.hz-bar:after {
+ content: '';
+ display: table;
+ clear: both;
+}
+/* === Оформление меню === */
+.menu_bordo {
+ background: #e38e0e;
+}
+.menu_bordo .hz_menu > li > a {
+ color: #000;
+}
+.menu_bordo .hz_menu > li > a:hover {
+ color: #fff;
+}
+/* === Оформление выпадающего подменю === */
+.menu_bordo .dropdown_menu > ul {
+ background: #2b2b2a;
+ border-color: #2b2b2a;
+}
+.menu_bordo .dropdown_menu > ul > li > a {
+ color: #fff;
+}
+.menu_bordo .dropdown_menu > ul > li > a:hover {
+ background: #e38e0e;
+ color: #fff;
+}
+.parent_dropdown > a:after {
+ display: inline-block;
+ padding: 1px 0 0 3px;
+ content: "\25BC ";
+ font-size: 10px;
+ vertical-align: top;
+}
